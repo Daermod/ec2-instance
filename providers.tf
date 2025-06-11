@@ -13,6 +13,7 @@ provider "aws" {
 }
 
 provider "aws" {
+  alias = "home"
   region = "us-east-1"
   profile = "iamadmin_home"
 }
