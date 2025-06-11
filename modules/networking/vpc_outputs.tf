@@ -10,5 +10,5 @@ output "vpc_cidr_block" {
 
 output "vpc_subnet" {
   description = "Subnet to be used for EC2 Instance"
-  value = aws_vpc.dev_vpc.subnet_id
+  value = aws_subnet.public_subnet1.id
 }

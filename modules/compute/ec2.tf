@@ -9,7 +9,18 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "web_server" {
-  ami = data.aws_ami.ubuntu
+  ami = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
   subnet_id = var.subnet_id
+  key_name = "ec2-key"
+
+  user_data = file("././userdata.sh")
+
+  tags = {
+    Name = "Web Server"
+  }
+}
+
+resource "aws_eip" "web_server_public_ip" {
+  instance = aws_instance.web_server.id
 }

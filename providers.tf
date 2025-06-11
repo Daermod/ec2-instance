@@ -8,7 +8,6 @@ terraform {
 }
 
 provider "aws" {
-  alias = "work"
   region = "us-east-1"
   profile =  "iamadmin_work"
 }
