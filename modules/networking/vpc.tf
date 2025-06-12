@@ -18,6 +18,10 @@ resource "aws_subnet" "public_subnet1" {
 
 resource "aws_internet_gateway" "dev_igw" {
   vpc_id = aws_vpc.dev_vpc.id
+
+  tags = {
+    Name = "Dev IGW"
+  }
 }
 
 resource "aws_route_table" "public_rtb" {
@@ -26,6 +30,10 @@ resource "aws_route_table" "public_rtb" {
   route  {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.dev_igw.id
+  }
+
+  tags = {
+    Name = " Dev RTB"
   }
 }
 

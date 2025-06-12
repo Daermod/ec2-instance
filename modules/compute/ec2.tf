@@ -4,7 +4,7 @@ data "aws_ami" "ubuntu" {
 
   filter {
     name = "name"
-    values = ["ubuntu-eks-pro/k8s_1.32/images/hvm-ssd-gp3/ubuntu-noble-24.04-arm64-server-20250607"]
+    values = ["ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server-20250610"]
   }
 }
 
