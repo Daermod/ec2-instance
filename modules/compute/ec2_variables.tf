@@ -6,3 +6,11 @@ variable "instance_type" {
 variable "subnet_id" {
   type = string
 }
+
+variable "sg_allow_http" {
+  type = string
+}
+
+variable "sg_allow_ssh" {
+  type = string
+}

@@ -11,4 +11,6 @@ module "security" {
 module "compute" {
   source = "./modules/compute"
   subnet_id = module.vpc_network.vpc_subnet
+  sg_allow_http = module.security.sg_allow_http
+  sg_allow_ssh = module.security.sg_allow_ssh
 }
