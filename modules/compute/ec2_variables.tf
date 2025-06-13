@@ -3,6 +3,11 @@ variable "instance_type" {
   default = "t2.micro"
 }
 
+variable "key_pair_name" {
+  type = string
+  default = "ec2-key-home"
+}
+
 variable "subnet_id" {
   type = string
 }

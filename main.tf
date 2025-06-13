@@ -13,7 +13,6 @@ module "compute" {
   subnet_id = module.vpc_network.vpc_subnet
   sg_allow_http = module.security.sg_allow_http
   sg_allow_ssh = module.security.sg_allow_ssh
-  
 }
 
 output "web_server_ip" {

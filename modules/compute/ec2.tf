@@ -16,7 +16,7 @@ resource "aws_instance" "web_server" {
       var.sg_allow_http,
       var.sg_allow_ssh
   ]
-  key_name = "ec2-key-home"
+  key_name = var.key_pair_name
 
   user_data = file("././userdata.sh")
 
